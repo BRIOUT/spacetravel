@@ -1,0 +1,343 @@
+/* SpacecraftPage.module.css - BLACK/LIME/GUNMETAL THEME */
+
+.spacecraftPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* HEADER SECTION */
+.spacecraftPage__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #84cc16;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.spacecraftPage__backButton {
+  padding: 0.75rem 1.5rem;
+  background: rgba(42, 52, 57, 0.5);
+  border: 1px solid #2a3439;
+  border-radius: 0.5rem;
+  color: #9ca3af;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.spacecraftPage__backButton:hover {
+  background: rgba(42, 52, 57, 0.8);
+  border-color: #84cc16;
+  color: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+.spacecraftPage__buildButton {
+  padding: 0.75rem 1.5rem;
+  background: rgba(132, 204, 22, 0.1);
+  border: 2px solid #84cc16;
+  border-radius: 0.5rem;
+  color: #84cc16;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.spacecraftPage__buildButton:hover {
+  background: rgba(163, 230, 53, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(163, 230, 53, 0.5);
+}
+
+/* LOADING STATE */
+.spacecraftPage__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 1.5rem;
+}
+
+.spacecraftPage__loading p {
+  color: #9ca3af;
+  font-size: 1.2rem;
+}
+
+.spacecraftPage__spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(132, 204, 22, 0.2);
+  border-top-color: #84cc16;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ERROR STATE */
+.spacecraftPage__error {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 2px solid rgba(239, 68, 68, 0.3);
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+.spacecraftPage__error h2 {
+  color: #f87171;
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+}
+
+.spacecraftPage__error p {
+  color: #fca5a5;
+  margin: 0 0 2rem 0;
+  font-size: 1.1rem;
+}
+
+.spacecraftPage__errorButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.spacecraftPage__retryButton {
+  padding: 1rem 2rem;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.spacecraftPage__retryButton:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+}
+
+/* MAIN CARD */
+.spacecraftPage__card {
+  background: linear-gradient(135deg, rgba(42, 52, 57, 0.8), rgba(10, 10, 10, 0.8));
+  border: 1px solid rgba(132, 204, 22, 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* TITLE SECTION */
+.spacecraftPage__titleSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 2px solid rgba(132, 204, 22, 0.3);
+  padding-bottom: 1.5rem;
+}
+
+.spacecraftPage__title {
+  margin: 0;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #a3e635 0%, #84cc16 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.spacecraftPage__id {
+  color: #6b7280;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* IMAGE SECTION */
+.spacecraftPage__imageSection {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.spacecraftPage__image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  border: 2px solid rgba(132, 204, 22, 0.3);
+}
+
+.spacecraftPage__imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: rgba(42, 52, 57, 0.5);
+  border: 2px dashed rgba(132, 204, 22, 0.3);
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.spacecraftPage__placeholderIcon {
+  font-size: 5rem;
+}
+
+.spacecraftPage__imagePlaceholder p {
+  color: #6b7280;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* SPECIFICATIONS */
+.spacecraftPage__specs {
+  background: rgba(42, 52, 57, 0.5);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(132, 204, 22, 0.2);
+}
+
+.spacecraftPage__specsTitle {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  color: #a3e635;
+}
+
+.spacecraftPage__specsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.spacecraftPage__spec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(10, 10, 10, 0.5);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(132, 204, 22, 0.1);
+}
+
+.spacecraftPage__specLabel {
+  color: #6b7280;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.spacecraftPage__specValue {
+  color: #84cc16;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.spacecraftPage__statusBadge {
+  background: rgba(132, 204, 22, 0.2);
+  border: 1px solid #84cc16;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+/* DESCRIPTION */
+.spacecraftPage__description {
+  background: rgba(42, 52, 57, 0.5);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-left: 4px solid #84cc16;
+}
+
+.spacecraftPage__descriptionTitle {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  color: #a3e635;
+}
+
+.spacecraftPage__descriptionText {
+  color: #9ca3af;
+  line-height: 1.8;
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+/* ACTIONS */
+.spacecraftPage__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.spacecraftPage__actionButton {
+  flex: 1;
+  min-width: 200px;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  border: 2px solid #84cc16;
+  background: rgba(132, 204, 22, 0.1);
+  color: #84cc16;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.spacecraftPage__actionButton:hover {
+  background: rgba(132, 204, 22, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(132, 204, 22, 0.4);
+}
+
+.spacecraftPage__actionButton--danger {
+  border-color: #ef4444;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.spacecraftPage__actionButton--danger:hover {
+  background: rgba(239, 68, 68, 0.2);
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .spacecraftPage__title {
+    font-size: 2rem;
+  }
+
+  .spacecraftPage__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .spacecraftPage__actions {
+    flex-direction: column;
+  }
+
+  .spacecraftPage__actionButton {
+    min-width: auto;
+  }
+
+  .spacecraftPage__spec {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

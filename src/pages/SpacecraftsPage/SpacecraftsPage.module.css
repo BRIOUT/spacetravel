@@ -1,0 +1,317 @@
+/* SpacecraftsPage.module.css - BLACK/LIME/GUNMETAL THEME */
+
+.spacecraftsPage {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* HEADER SECTION */
+.spacecraftsPage__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #84cc16;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.spacecraftsPage__header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  background: linear-gradient(135deg, #a3e635 0%, #84cc16 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.spacecraftsPage__headerButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.spacecraftsPage__backButton {
+  padding: 0.75rem 1.5rem;
+  background: rgba(42, 52, 57, 0.5);
+  border: 1px solid #2a3439;
+  border-radius: 0.5rem;
+  color: #9ca3af;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.spacecraftsPage__backButton:hover {
+  background: rgba(42, 52, 57, 0.8);
+  border-color: #84cc16;
+  color: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+.spacecraftsPage__buildButton {
+  padding: 0.75rem 1.5rem;
+  background: rgba(132, 204, 22, 0.1);
+  border: 2px solid #84cc16;
+  border-radius: 0.5rem;
+  color: #84cc16;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.spacecraftsPage__buildButton:hover {
+  background: rgba(163, 230, 53, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(163, 230, 53, 0.5);
+}
+
+/* STATISTICS SECTION */
+.spacecraftsPage__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.spacecraftsPage__stat {
+  background: rgba(42, 52, 57, 0.5);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(132, 204, 22, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.spacecraftsPage__statLabel {
+  color: #6b7280;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.spacecraftsPage__statValue {
+  color: #84cc16;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* LOADING STATE */
+.spacecraftsPage__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 1.5rem;
+}
+
+.spacecraftsPage__loading p {
+  color: #9ca3af;
+  font-size: 1.2rem;
+}
+
+.spacecraftsPage__spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(132, 204, 22, 0.2);
+  border-top-color: #84cc16;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ERROR STATE */
+.spacecraftsPage__error {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 2px solid rgba(239, 68, 68, 0.3);
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+.spacecraftsPage__error h2 {
+  color: #f87171;
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+}
+
+.spacecraftsPage__error p {
+  color: #fca5a5;
+  margin: 0 0 2rem 0;
+  font-size: 1.1rem;
+}
+
+.spacecraftsPage__retryButton {
+  padding: 1rem 2rem;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.spacecraftsPage__retryButton:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+}
+
+/* EMPTY STATE */
+.spacecraftsPage__empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(42, 52, 57, 0.5);
+  border-radius: 1rem;
+  border: 2px dashed rgba(132, 204, 22, 0.3);
+  margin-top: 2rem;
+}
+
+.spacecraftsPage__empty h2 {
+  color: #e5e7eb;
+  margin: 0 0 1rem 0;
+}
+
+.spacecraftsPage__empty p {
+  color: #9ca3af;
+  margin: 0 0 2rem 0;
+  font-size: 1.1rem;
+}
+
+/* SPACECRAFT CARDS LIST */
+.spacecraftsPage__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* INDIVIDUAL SPACECRAFT CARD */
+.spacecraftsPage__card {
+  background: linear-gradient(135deg, rgba(42, 52, 57, 0.8), rgba(10, 10, 10, 0.8));
+  border: 1px solid rgba(132, 204, 22, 0.3);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.spacecraftsPage__card:hover {
+  transform: translateY(-5px);
+  border-color: #84cc16;
+  box-shadow: 0 10px 30px rgba(132, 204, 22, 0.3);
+}
+
+.spacecraftsPage__cardTitle {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #a3e635;
+  border-bottom: 2px solid rgba(132, 204, 22, 0.3);
+  padding-bottom: 0.75rem;
+}
+
+.spacecraftsPage__cardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.spacecraftsPage__cardDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spacecraftsPage__cardLabel {
+  color: #6b7280;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.spacecraftsPage__cardValue {
+  color: #84cc16;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.spacecraftsPage__cardDescription {
+  color: #9ca3af;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+  font-size: 0.95rem;
+}
+
+.spacecraftsPage__cardButtons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.spacecraftsPage__cardButton {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 2px solid #84cc16;
+  background: rgba(132, 204, 22, 0.1);
+  color: #84cc16;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.spacecraftsPage__cardButton:hover {
+  background: rgba(132, 204, 22, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(132, 204, 22, 0.4);
+}
+
+.spacecraftsPage__cardButton--danger {
+  border-color: #ef4444;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.spacecraftsPage__cardButton--danger:hover {
+  background: rgba(239, 68, 68, 0.2);
+  box-shadow: 0 3px 10px rgba(239, 68, 68, 0.3);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .spacecraftsPage__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .spacecraftsPage__header h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .spacecraftsPage__headerButtons {
+    flex-direction: column;
+  }
+
+  .spacecraftsPage__list {
+    grid-template-columns: 1fr;
+  }
+
+  .spacecraftsPage__cardButtons {
+    flex-direction: column;
+  }
+}

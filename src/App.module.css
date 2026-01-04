@@ -1,0 +1,8 @@
+/* App.module.css - Scoped Styles for App Component */
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+  color: #e5e7eb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

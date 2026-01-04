@@ -1,0 +1,230 @@
+/* ConstructionPage.module.css - BLACK/LIME/GUNMETAL THEME */
+
+.constructionPage {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* HEADER SECTION */
+.constructionPage__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #84cc16;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.constructionPage__title {
+  margin: 0;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #a3e635 0%, #84cc16 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.constructionPage__backButton {
+  padding: 0.75rem 1.5rem;
+  background: rgba(42, 52, 57, 0.5);
+  border: 1px solid #2a3439;
+  border-radius: 0.5rem;
+  color: #9ca3af;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.constructionPage__backButton:hover {
+  background: rgba(42, 52, 57, 0.8);
+  border-color: #84cc16;
+  color: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+/* FORM */
+.constructionPage__form {
+  background: linear-gradient(135deg, rgba(42, 52, 57, 0.8), rgba(10, 10, 10, 0.8));
+  border: 1px solid rgba(132, 204, 22, 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.constructionPage__intro {
+  color: #9ca3af;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* FORM FIELDS */
+.constructionPage__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.constructionPage__label {
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* INPUT STYLING */
+.constructionPage__input,
+.constructionPage__textarea {
+  padding: 0.75rem 1rem;
+  background: rgba(10, 10, 10, 0.5);
+  border: 2px solid rgba(132, 204, 22, 0.2);
+  border-radius: 0.5rem;
+  color: #e5e7eb;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.constructionPage__input:focus,
+.constructionPage__textarea:focus {
+  outline: none;
+  border-color: #84cc16;
+  box-shadow: 0 0 0 3px rgba(132, 204, 22, 0.1);
+  background: rgba(10, 10, 10, 0.7);
+}
+
+.constructionPage__input::placeholder,
+.constructionPage__textarea::placeholder {
+  color: #6b7280;
+}
+
+.constructionPage__input:disabled,
+.constructionPage__textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ERROR STATE */
+.constructionPage__input--error,
+.constructionPage__textarea--error {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.constructionPage__error {
+  color: #f87171;
+  font-size: 0.875rem;
+  margin-top: -0.25rem;
+}
+
+/* HINT TEXT */
+.constructionPage__hint {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+/* TEXTAREA SPECIFIC */
+.constructionPage__textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+/* NUMBER INPUT - Remove spinner arrows */
+.constructionPage__input[type="number"]::-webkit-inner-spin-button,
+.constructionPage__input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.constructionPage__input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* ACTIONS */
+.constructionPage__actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.constructionPage__submitButton {
+  flex: 1;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%);
+  border: 2px solid #a3e635;
+  border-radius: 0.5rem;
+  color: #000000;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.constructionPage__submitButton:hover:not(:disabled) {
+  background: linear-gradient(135deg, #a3e635 0%, #84cc16 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(163, 230, 53, 0.5);
+}
+
+.constructionPage__submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.constructionPage__cancelButton {
+  flex: 1;
+  padding: 1rem 2rem;
+  background: rgba(42, 52, 57, 0.5);
+  border: 2px solid #2a3439;
+  border-radius: 0.5rem;
+  color: #9ca3af;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.constructionPage__cancelButton:hover:not(:disabled) {
+  background: rgba(42, 52, 57, 0.8);
+  border-color: #84cc16;
+  color: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+.constructionPage__cancelButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .constructionPage__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .constructionPage__title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .constructionPage__actions {
+    flex-direction: column;
+  }
+
+  .constructionPage__form {
+    padding: 1.5rem;
+  }
+}
